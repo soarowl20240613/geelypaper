@@ -488,9 +488,9 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 = 附录
 
 == 论文模板
-#code(raw(read("paper.typ"), lang: "typc"), lang: "typc")
+#code(raw(read("paper.typ"), lang: "typc"), lang: "typst")
 
 == 本文代码
-#code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typc")
+#code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typst")
 
 #bibliography("basic.yml", style: "gb-7114-2015-numeric")
