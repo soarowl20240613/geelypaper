@@ -506,6 +506,8 @@ _
 #set heading(numbering: "A.1")
 = 附录
 
+您可在#link("https://github.com/soarowl/geelypaper.git")检查最新代码，或提PR。
+
 == 论文模板
 #code(raw(read("paper.typ"), lang: "typc"), lang: "typst")
 
