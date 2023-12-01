@@ -4,13 +4,13 @@
 
 所以，笔者做了一款房屋租赁系统来试图解决人们看房的困难。一款房屋租赁系统的存在可以带来很多好处。首先，它可以让房东和租户更容易地连接起来，节省彼此的时间和精力。其次，系统可以提供一些自动化功能，如在线预订、租金支付和合同签署等，使整个租赁过程更加快捷方便。此外，系统还可以提供租户信用评分、房源信息管理等功能，有助于提高租赁市场的透明度和规范性。最后，对于平台运营商而言，这类系统也是创造盈利模式的一个途径，因为他们可以通过收取服务费或广告费等方式获得收入 @camb。
 
-该系统采用前后端分离的设计理念，前端主要采用Vue框架。当前Vue是Javascript使用最常用的框架，因为Vue可用性高，并且用法多、范围广、对界面饱满有很大作用;后端部分使用Springboot框架，Springboot框架更加高效安全可靠，解决了配置复杂冗余的问题，而且还具有很多非功能特性，是作为计算机本科生必须掌握的技术;后台数据使用MySQL进行管理。]
+该系统采用前后端分离的设计理念，前端主要采用Vue框架。当前Vue是Javascript使用最常用的框架，因为Vue可用性高，并且用法多、范围广、对界面饱满有很大作用;后端部分使用SpringBoot框架，SpringBoot框架更加高效安全可靠，解决了配置复杂冗余的问题，而且还具有很多非功能特性，是作为计算机本科生必须掌握的技术;后台数据使用MySQL进行管理。]
 
 #let enabstract = [With the rapid development of science and technology, there is a surplus of labor force in rural areas. Most of them flow into cities to seek livelihoods and eventually become urban population. This makes urban population mobility increase, housing rental has become the top priority of people's concern. At present, there are existing ways of housing rental agents and residential properties, but this traditional way of artificial management has many drawbacks. For example, the real estate is difficult to distinguish between the real estate and the real estate, and there are even many intermediaries running away. Of course, there are some house-viewing software on the market, but after investigation, there are many problems such as inadequate supervision, false housing, high agency fees and few housing resources @donne.
 
 So, I built a rental system to try to solve the problem of people looking at houses. The existence of a rental system can bring many benefits. First, it allows landlords and tenants to connect more easily, saving each other time and effort. Secondly, the system can provide some automatic functions, such as online booking, rent payment and contract signing, to make the whole leasing process faster and more convenient. In addition, the system can also provide tenants with credit scores, housing information management and other functions, helping to improve the transparency and standardization of the rental market. Finally, for platform operators, such systems are also a way to create a revenue model, as they can earn revenue by charging for services or advertising.
 
-The system adopts the design concept of separating the front and rear ends, and the front end mainly uses the Vue frame. At present, Vue is the most commonly used framework for Javascript, because Vue has high availability, and a wide range of usage, full interface has a great role; The back-end part uses Springboot framework, which is more efficient, safe and reliable, solves the problem of complex and redundant configuration, and also has many non-functional features, which is a technology that must be mastered by computer undergraduates. Background data is managed using MySQL.]
+The system adopts the design concept of separating the front and rear ends, and the front end mainly uses the Vue framework. At present, Vue is the most commonly used framework for Javascript, because Vue has high availability, and a wide range of usage, full interface has a great role; The back-end part uses SpringBoot framework, which is more efficient, safe and reliable, solves the problem of complex and redundant configuration, and also has many non-functional features, which is a technology that must be mastered by computer undergraduates. Backend data is managed using MySQL.]
 
 #show: paper.with(
   title: "房屋租赁管理系统设计与实现",
@@ -21,7 +21,7 @@ The system adopts the design concept of separating the front and rear ends, and 
   adviser: "卓能文",
   date: "2023年5月",
   cnabstract: cnabstract,
-  cnkeywords: ("Vue", "Springboot框架", "MySQL", "交互"),
+  cnkeywords: ("Vue", "SpringBoot框架", "MySQL", "交互"),
   enabstract: enabstract,
   enkeywords: ("Vue", "SpringBoot framework", "MySQL", "interaction"),
 )
@@ -29,7 +29,7 @@ The system adopts the design concept of separating the front and rear ends, and 
 = 绪论
 
 == 研究目的和意义
-本课题计划完成一个全面可靠高效能实现信息透明化的房屋租赁管理系统 @drill。通过完成并完善本选题，总结了本科学期期间的知识点，充分培养了动手能力，学以致用实践代码的编写。并且在解决问题的过程中，对java技术有进一步的认知，提高自己的综合水平，锻炼今后的工作中遇到困难的解决钻研能力。
+本课题计划完成一个全面可靠高效能实现信息透明化的房屋租赁管理系统 @drill。通过完成并完善本选题，总结了本科学期期间的知识点，充分培养了动手能力，学以致用实践代码的编写。并且在解决问题的过程中，对Java技术有进一步的认知，提高自己的综合水平，锻炼今后的工作中遇到困难的解决钻研能力。
 
 房屋租赁系统是一个在线平台，用于连接房东和租户，并提供一些自动化功能，使整个租赁过程更加便捷。它的出现可以带来多方面的意义，下面笔者将详细阐述。
 
@@ -122,10 +122,10 @@ MySQL支持多种操作系统（Linux、Windows、Mac OS等）以及多种编程
 总之，MySQL是一款成熟、稳定、可靠、高效、易用、开放和可扩展的关系型数据库管理系统。它被广泛应用于互联网领域，支撑着许多大型网站和应用程序的数据存储和处理，如Facebook、谷歌、雅虎、推特等。
 
 == 版本控制软件Git
-Git是一个开源的分布式版本控制工具，开发者们可使用GitHub等平台应用Git，进行协同开发。Git由Linus Torvalds开发，最初开发是为了满足团队Linus内核开发的需求，与常用的集中式版本控制工具不同，Git最大的特点就是采用了分布式的模式，摒弃了集中式工具中只有中心服务器的模式，每位参与开发的使用者都持有完整版本库，有效避免了使用集中式版本控制系统的协同开发中的不稳定性，不必担心中心服务器数据丢失，同时也加快了使用者们的代码交流。如图2-2所示，在Git的基本工作中主要分为四个版块，图中从左至右分别为：工作区间、暂存区、本地仓库以及远程仓库。其中，工作区间为工程目录文件，主要在工作区间执行Git命令；暂存区为暂存上传的代码数据的区间；本地仓库用来存储本地代码，同时是本地代码与远程代码的中转站；远程仓库为中心服务平台，用于远程保存提交的代码。Git基于这四个模块，构成了自身的基本工作流程：开发者修改工作区间的文件，执行add后文件将被添加到暂存区，随后commit提交会将文件保存至本地仓库，最终执行push推送，文件将会被传输到远程仓库进行保存。
+Git是一个开源的分布式版本控制工具，开发者们可使用GitHub等平台应用Git，进行协同开发。Git由Linus Torvalds开发，最初开发是为了满足团队Linus内核开发的需求，与常用的集中式版本控制工具不同，Git最大的特点就是采用了分布式的模式，摒弃了集中式工具中只有中心服务器的模式，每位参与开发的使用者都持有完整版本库，有效避免了使用集中式版本控制系统的协同开发中的不稳定性，不必担心中心服务器数据丢失，同时也加快了使用者们的代码交流。在Git的基本工作中主要分为四个版块，图中从左至右分别为：工作区间、暂存区、本地仓库以及远程仓库。其中，工作区间为工程目录文件，主要在工作区间执行Git命令；暂存区为暂存上传的代码数据的区间；本地仓库用来存储本地代码，同时是本地代码与远程代码的中转站；远程仓库为中心服务平台，用于远程保存提交的代码。Git基于这四个模块，构成了自身的基本工作流程：开发者修改工作区间的文件，执行add后文件将被添加到暂存区，随后commit提交会将文件保存至本地仓库，最终执行push推送，文件将会被传输到远程仓库进行保存。
 
 == 本章小结
-本章简要介绍了项目开发所需的相关知识，其中包括MVP设计模式的设计原理、所用的主要开发工具以及开发语言、Mysql数据库以及版本控制器Git的简介。以上四个模块的储备知识将为后续项目开发提供可靠的理论支持，加强本次研究的可行性。
+本章简要介绍了项目开发所需的相关知识，其中包括MVP设计模式的设计原理、所用的主要开发工具以及开发语言、MySQL数据库以及版本控制器Git的简介。以上四个模块的储备知识将为后续项目开发提供可靠的理论支持，加强本次研究的可行性。
 
 = 用户权限设计分析
 == 租客权限设计分析
@@ -216,7 +216,7 @@ Git是一个开源的分布式版本控制工具，开发者们可使用GitHub�
 
 - 在用户注册成功后，可以通过邮件或短信的形式发送激活链接，确保用户账户的有效性。
 
-- 在登录过程中可以使用JWT token等技术来提高系统的安全性，避免明文传输密码等敏感信息。
+- 在登录过程中可以使用JWT Token等技术来提高系统的安全性，避免明文传输密码等敏感信息。
 
 - 为了方便用户管理自己的个人信息，可以在用户登录后提供个人中心页面，可供用户修改个人资料、查看订单等功能。
 
@@ -238,10 +238,10 @@ Git是一个开源的分布式版本控制工具，开发者们可使用GitHub�
 综上所述，权限增删改查是房屋租赁管理系统中非常重要的一部分，需要合理设计并实现这个功能，以便保障用户数据的安全性和系统的稳定性。
 
 == 后端设计
-后端部分使用了java的Springboot框架，并且采取的Mysql数据库来存储数据。在设计房屋租赁管理系统后端时，需要考虑到架构、技术栈、安全性和扩展性等方面。以下是一些设想部分：
+后端部分使用了Java的SpringBoot框架，并且采取的MySQL数据库来存储数据。在设计房屋租赁管理系统后端时，需要考虑到架构、技术栈、安全性和扩展性等方面。以下是一些设想部分：
 
 - 架构：在确定系统架构时，可以采用分层架构或微服务架构，将业务逻辑、数据访问等功能进行分离并单独部署，提高系统的可维护性和扩展性。
-- 技术栈：在选择技术栈时，可以考虑到开发效率、系统稳定性、性能和安全等方面，并选取相应的技术实现。在这次实现中将使用Spring Boot框架技术实现系统功能。
+- 技术栈：在选择技术栈时，可以考虑到开发效率、系统稳定性、性能和安全等方面，并选取相应的技术实现。在这次实现中将使用SpringBoot框架技术实现系统功能。
 
 - 安全性：在保障系统安全性方面，可以采用多种措施，例如对用户输入的数据进行严格验证和过滤，使用SSL加密协议保证数据传输的安全，使用JWT Token等技术防止CSRF等攻击。
 
@@ -292,13 +292,13 @@ Visual Studio Code，也被简称为VS Code，是一款免费、开源、轻量�
 由此看来，Studio Code以其简洁易用、功能强大、跨平台等特点受到越来越多开发者的推崇，并成为全球范围内非受欢迎的代码编辑器。
 
 ==== IDEA
-IDEA是JetBrains公司开发的一款Java IDE，优秀的代码编辑器和调试工具。它支持多种编程语言，包括Java、Kotlin、Groovy、Scala等。Idea是基于IntelliJ IDEA Community Edition打的，具有轻量且易于学习的特点。
+IDEA是JetBrains公司开发的一款Java IDE，优秀的代码编辑器和调试工具。它支持多种编程语言，包括Java、Kotlin、Groovy、Scala等。IDEA是基于IntelliJ IDEA Community Edition打的，具有轻量且易于学习的特点。
 
 IDEA提供了智能代码补全、重构、代码分析、版本控制以及其他实用工具，使得开发者可以更加有效地进行开发这款IDE还包括量的插件，例如UI设计器、数据库管理、Web开发，这些插件可以帮开发人员进一的提高开发效率。
 
-与其他IDE相比，Idea在代码提示、Refactor等方面表现越，并且具有强大的搜索功能和快捷键设置。好的辅助功能使得Idea为Java开发者的选IDE之一。
+与其他IDE相比，IDEA在代码提示、Refactor等方面表现越，并且具有强大的搜索功能和快捷键设置。好的辅助功能使得IDEA为Java开发者的选IDE之一。
 
-总之，作为业界标准之一的Java开发工具之一，Idea在提高编写效率、缩短开发周期等面具有重要作。
+总之，作为业界标准之一的Java开发工具之一，IDEA在提高编写效率、缩短开发周期等面具有重要作。
 
 ==== MySQL数据库
 MySQL是一个广泛使用的关系型数据库管理系统，开源免费。MySQL是轻量级且易于安装部署，在开发Web应用非常流行。MySQL持多种操作系统，并可以通过多种编语言进行访问。MySQL功能丰富，提供了完整的数据管理、查询和处理功能，可以存储大型数据集并支持高并发访问。MySQL的安全性也得到了很好的保证，支持基于角的访问控制和、表、列级别的权限管理。
@@ -360,10 +360,10 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 总之，房屋租赁管理系统是一个非常重要的应用程序，可以帮助房地产公司、物业管理公司和个人房东等有效管理其租赁业务。通过考虑响应式设计、多语言支持、数据可视化、自动化流程以及安全性等关键因素，可以确保该系统具有良好的用户体验，并能够在市场上获得成功。
 
 == 后端实现
-后端部分使用了java的Springboot框架，并且采取的Mysql数据库来存储数据。大体步骤如下：
-- 先搭建一个springboot项目，使用了IDEA开发工具来进行后端开发。
+后端部分使用了Java的SpringBoot框架，并且采取的MySQL数据库来存储数据。大体步骤如下：
+- 先搭建一个SpringBoot项目，使用了IDEA开发工具来进行后端开发。
 - 确定系统架构和数据库结构，设计ER图创建相应的表格
-- 在pom.xml文件中添加必的依赖，包括 Boot和MySql驱动。
+- 在pom.xml文件中添加必的依赖，包括 Boot和MySQL驱动。
 - 编实体类（Entity）和DAO层（Data Access Object）对应的Repository接口，以及对应的SQL语句。
 - 创建服务层（Service）并实现事务管理。
 - 配置数据库连接池和相关的参数，包括数据库url、用户名和密码等。
@@ -380,7 +380,7 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 #image("img/idea7.png")
 
 == 后端开发的关键类
-在使用Spring boot框架中实现功能有许多关键类，下面将介绍部分关键类。
+在使用Spring Boot框架中实现功能有许多关键类，下面将介绍部分关键类。
 1. \@RestController: 注解表示该类是一个RESTful API的控制器。
 2. \@RequestMapping: 该注解表示该方法对应的URL请求路径。
 3. \@RequestBody: 该注解表示该参数是请求体中的数据。
@@ -405,6 +405,7 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 == 测试
 软件测试通常是指验证与确认两部分。该系统的主要进行了以下几个方面的测试：资源测试、功能测试、任务测试。测试的流程 @fig:testflow 所示。
 #figure(
+  caption: [测试流程],
   image("img/testflow.png", width: 50%)
 ) <testflow>
 
@@ -456,10 +457,10 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 == 本章小结
 本章主要介绍了系统测试以及最终系统运行结果。首先介绍了这个测试流程，包括资源测试和功能测试。通过系统实际运行页面截图，辅以文字描述对系统的最终运行结果进行了效果展示说明。
 
-= 总 结
+= 总#h(1em)结
 本篇论文主要介绍了房屋租赁管理的系统与实现，通过对系统的详细描述和体实现，展现了其在房屋租赁管理中的重要作用。
 
-首先介绍了课题的背景和研究意义，指出了房屋租赁管理系统的必要性和重性。接下来，本文分析了当前房屋租赁行业的现状和问题，并提出了本文设计的系统解决问题的方法。房屋租赁管理设计和实现基于Java，使用Springboot开发框架进行开发，并采用MySQL数据库进行数据管理。通过对用户需求的分析和系统功能的划分，本文实现了系统的基础功能和高级功能，包括房屋信息管理、租客信息管理等核心模块。
+首先介绍了课题的背景和研究意义，指出了房屋租赁管理系统的必要性和重性。接下来，本文分析了当前房屋租赁行业的现状和问题，并提出了本文设计的系统解决问题的方法。房屋租赁管理设计和实现基于Java，使用SpringBoot开发框架进行开发，并采用MySQL数据库进行数据管理。通过对用户需求的分析和系统功能的划分，本文实现了系统的基础功能和高级功能，包括房屋信息管理、租客信息管理等核心模块。
 
 在具体实现中，采用了MVC模式，将系统的业务逻辑、视图呈现和数据处理相互分离，从而提高了系统的可重用性、可扩展性和可维护性。
 
@@ -470,7 +471,7 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 综上所述，本文的研究为房屋租赁管理系统的设计和实现提供了一定的参考和借鉴值，也为相关领域的研究者提供了一点微薄之力。
 
 #set heading(numbering: none)
-= 致 谢
+= 致#h(1em)谢
 在笔者的本科生涯即将结束之际，笔者不禁回首往事，深感时光如梭。这些年来有许多人和事让笔者受益匪浅，使得笔者度过了充实而难忘的四年。在这篇毕业论文致谢中，笔者要对他们表达真情实感的感激之意。
 
 首先，笔者要感谢笔者的父母，在笔者茁壮成长的过程给予了笔者无尽的关爱和支持。他们默默无闻地为笔者付出，从小到大笔者一直被他们宠了。他们为了笔者能够顺利完成学业，所有的膳食语出等供应都是最好的，虽然这些都可能已成为家长义务但是，对于笔者感恩永存。
