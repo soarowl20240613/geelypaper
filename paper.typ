@@ -16,6 +16,7 @@
   enkeywords: (),
   body,
 ) = {
+  set document(title: title, author: author, keywords: cnkeywords.join("，") + enkeywords.join("; "))
   set text(font: ("Times New Roman", "SimSun"), lang: "zh")
 
   //************ 图形、代码及表格列表设置
