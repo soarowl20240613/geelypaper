@@ -154,7 +154,7 @@
 ]
 
 #let bibliography = [
-  #bibliography("basic.yml", full: true, style: "gb-7114-2015-numeric", title: none)
+  #bibliography("basic.yml", full: true, style: "gb-7714-2015-numeric", title: none)
 ]
 
 #let audit = [

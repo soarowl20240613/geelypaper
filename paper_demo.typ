@@ -522,4 +522,4 @@ _
 == 本文代码
 #code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typst")
 
-#bibliography("basic.yml", style: "gb-7114-2015-numeric")
+#bibliography("basic.yml", style: "gb-7714-2015-numeric")
