@@ -1,4 +1,4 @@
-#import "@preview/i-figured:0.2.1"
+#import "@preview/i-figured:0.2.3"
 #import "@preview/sourcerer:0.2.1": code
 #import "@preview/tbl:0.0.4"
 
