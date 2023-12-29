@@ -53,7 +53,7 @@
   //************
 
   //************ 表格设置
-  show: tbl.template.with(box: false, tab: "|")
+  show: tbl.template.with(box: false, breakable: true, tab: "|")
   //************
 
   //************ 标题页设置
