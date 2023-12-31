@@ -24,14 +24,17 @@
   // level 2 section, so at every level 1 and level 2 heading.
   show heading: i-figured.reset-counters.with(level: 1)
 
+  // 设置标题为黑体
   show heading: it => {
     text(font: ("Times New Roman", "SimHei"), it)
   }
 
+// 每章分页
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     align(center, it)
   }
+
   // this `level: 2` instructs the figure numbering to include the first
   // two levels of the current heading numbering.
   // how this should behave with zeros can be set using `zero-fill`.
@@ -156,10 +159,6 @@
 
   //************ 目录
   set par(first-line-indent: 0em, justify: true)
-  show outline: it => {
-    show heading: set align(center)
-    it
-  }
   outline(title: [目#h(2em)录], indent: true, depth: 3)
   i-figured.outline(title: [图形列表])
   i-figured.outline(target-kind: table, title: [表格列表])
@@ -170,7 +169,19 @@
   //************
 
   //************ 正文
-  set heading(numbering: "1.1")
+  set heading(
+    numbering: (..nums) => {
+      let vals = nums.pos()
+      if vals.len() == 1 {
+        let value = str(vals.at(0))
+        return "第" + value + "章"
+      }
+      else {
+        return nums.pos().map(str).join(".")
+      }
+    }
+  )
+
   set page(numbering: "1")
   set par(first-line-indent: 2em, justify: true)
   counter(page).update(1)
