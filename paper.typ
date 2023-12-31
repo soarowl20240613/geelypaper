@@ -29,7 +29,7 @@
     text(font: ("Times New Roman", "SimHei"), it)
   }
 
-// 每章分页
+  // 每章分页，标题居中
   show heading.where(level: 1): it => {
     pagebreak(weak: true)
     align(center, it)
