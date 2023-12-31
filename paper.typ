@@ -134,7 +134,7 @@
   counter(page).update(1)
   
   //************ 中文摘要
-  heading([摘#h(1em)要])
+  heading([摘#h(2em)要])
   cnabstract
   v(1em)
   let cn = cnkeywords.join("，")
