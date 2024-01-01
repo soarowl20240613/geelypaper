@@ -166,10 +166,18 @@
   //************ 正文
   counter(page).update(1)
   set heading(numbering: "1.1")
-  show heading.where(level: 1): it => {
-    pagebreak(weak: true)
-    align(center)[#text(font: ("Times New Roman", "SimHei"))[第#counter(heading).display("一")章 #it.body]]
-  }
+  set heading(
+    numbering: (..nums) => {
+      let vals = nums.pos()
+      let value = str(vals.at(0))
+      if vals.len() == 1 {
+        return "第" + value + "章"
+      }
+      else {
+        return nums.pos().map(str).join(".")
+      }
+    }
+  )
   set page(numbering: "1")
   set par(first-line-indent: 2em, justify: true)
   
