@@ -164,8 +164,8 @@
   //************
 
   //************ 正文
+  set page(numbering: "1")
   counter(page).update(1)
-  set heading(numbering: "1.1")
   set heading(
     numbering: (..nums) => {
       let vals = nums.pos()
@@ -178,7 +178,6 @@
       }
     }
   )
-  set page(numbering: "1")
   set par(first-line-indent: 2em, justify: true)
   
   body
