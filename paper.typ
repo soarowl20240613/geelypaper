@@ -19,21 +19,16 @@
   set document(title: title, author: author, keywords: cnkeywords.join("，") + enkeywords.join("; "))
   set text(font: ("Times New Roman", "SimSun"), lang: "zh")
 
+  // 设置章节标题分页、居中、黑体
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
+  }
+
   //************ 图形、代码及表格列表设置
   // this `level: 2` instructs the figure counters to be reset for every
   // level 2 section, so at every level 1 and level 2 heading.
   show heading: i-figured.reset-counters.with(level: 1)
-
-  // 设置标题为黑体
-  show heading: it => {
-    text(font: ("Times New Roman", "SimHei"), it)
-  }
-
-  // 每章分页，标题居中
-  show heading.where(level: 1): it => {
-    pagebreak(weak: true)
-    align(center, it)
-  }
 
   // this `level: 2` instructs the figure numbering to include the first
   // two levels of the current heading numbering.
@@ -169,23 +164,15 @@
   //************
 
   //************ 正文
-  set heading(
-    numbering: (..nums) => {
-      let vals = nums.pos()
-      if vals.len() == 1 {
-        let value = str(vals.at(0))
-        return "第" + value + "章"
-      }
-      else {
-        return nums.pos().map(str).join(".")
-      }
-    }
-  )
-
+  counter(page).update(1)
+  set heading(numbering: "1.1")
+  show heading.where(level: 1): it => {
+    pagebreak(weak: true)
+    align(center)[#text(font: ("Times New Roman", "SimHei"))[第#counter(heading).display("一")章 #it.body]]
+  }
   set page(numbering: "1")
   set par(first-line-indent: 2em, justify: true)
-  counter(page).update(1)
-
+  
   body
   //************
 }
