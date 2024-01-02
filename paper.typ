@@ -2,6 +2,33 @@
 #import "@preview/sourcerer:0.2.1": code
 #import "@preview/tbl:0.0.4"
 
+#let toChineseNum(n) = {
+  let digits = ("零", "一", "二", "三", "四", "五", "六", "七", "八", "九")
+  let units = ("", "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千")
+  let values = str(n)
+  let result = ""
+  let len = values.len() - 1
+  let i = len
+  while i >= 0 {
+    result = digits.at(int(values.at(i))) + units.at(len - i) + result;
+    i -= 1
+  }
+  result = result.replace("零亿", "零")
+  result = result.replace("零万", "零")
+  result = result.replace("零千", "零")
+  result = result.replace("零百", "零")
+  result = result.replace("零十", "零")
+  result = result.replace("零零", "零")
+  result = result.replace("零零", "零")
+  if result.len() > 3 and result.ends-with("零") {
+    result = result.trim("零")
+  }
+  if result.len() == 9 or result.len() == 6 {
+    result = result.replace("一十", "十")
+  }
+  return result
+}
+
 #let paper(
   title: "",
   faculty: "",
@@ -169,7 +196,7 @@
   set heading(
     numbering: (..nums) => {
       let vals = nums.pos()
-      let value = str(vals.at(0))
+      let value = toChineseNum(vals.at(0))
       if vals.len() == 1 {
         return "第" + value + "章"
       }
