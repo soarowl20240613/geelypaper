@@ -1,42 +1,7 @@
+#import "@preview/a2c-nums:0.0.1": int-to-cn-num
 #import "@preview/i-figured:0.2.3"
 #import "@preview/sourcerer:0.2.1": code
 #import "@preview/tbl:0.0.4"
-
-// Convert an int string to Chinese number
-#let str-to-cn-num(s) = {
-  let digits = ("零", "一", "二", "三", "四", "五", "六", "七", "八", "九")
-  let units = ("", "十", "百", "千", "万", "十", "百", "千", "亿", "十", "百", "千")
-  let result = ""
-  let len = s.len() - 1
-  let i = len
-  while i >= 0 {
-    result = digits.at(int(s.at(i))) + units.at(len - i) + result;
-    i -= 1
-  }
-
-  for i in (0, 1, 2, 3) {
-    result = result.replace("零亿", "亿")
-    result = result.replace("零万", "万")
-    result = result.replace("零千", "零")
-    result = result.replace("零百", "零")
-    result = result.replace("零十", "零")
-    result = result.replace("零零", "零")
-    result = result.replace("亿万", "亿")
-  }
-  if result.len() > 3 and result.ends-with("零") {
-    result = result.trim("零")
-  }
-  if result.len() == 9 or result.len() == 6 {
-    result = result.replace("一十", "十")
-  }
-  return result
-}
-
-// Convert an int to Chinese number
-#let int-to-cn-num(n) = {
-  let s = str(n)
-  return str-to-cn-num(s)
-}
 
 #let paper(
   title: "",
