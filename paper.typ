@@ -165,20 +165,15 @@
   // pagebreak() 可能引起多余空白页
   //************
 
-  // 设置章节标题分页、居中、黑体
-  show heading.where(level: 1): it => {
-    pagebreak(to: "odd", weak: true)
-    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
-  }
-
   //************ 正文
   set page(numbering: "1")
   counter(page).update(1)
+  // 设置章节标题
   set heading(
     numbering: (..nums) => {
       let vals = nums.pos()
-      let value = int-to-cn-num(vals.at(0))
       if vals.len() == 1 {
+        let value = int-to-cn-num(vals.at(0))
         return "第" + value + "章"
       }
       else {
@@ -186,6 +181,12 @@
       }
     }
   )
+  // 设置章节标题分页并位于奇数页、居中、黑体
+  show heading.where(level: 1): it => {
+    pagebreak(to: "odd", weak: true)
+    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
+  }
+  // 首行缩进
   set par(first-line-indent: 2em, justify: true)
   
   body
