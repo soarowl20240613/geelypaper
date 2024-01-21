@@ -162,7 +162,7 @@
   i-figured.outline(target-kind: raw, title: [代码列表])
   // master 版本不能编译
   i-figured.outline(target-kind: math.equation, title: [公式列表])
-  // pagebreak() 可能引起多余空白页
+  pagebreak()
   //************
 
   //************ 正文
