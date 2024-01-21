@@ -95,6 +95,7 @@
   } // Only works for paragraphs directly after heading
 
   //************ 版权页
+  pagebreak(to: "odd", weak: true)
   align(center, text(1.5em, font: "SimHei", [学术诚信声明]))
   [本人郑重声明：所呈交的毕业论文（设计），是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。]
   table(
@@ -128,6 +129,7 @@
   counter(page).update(1)
   
   //************ 中文摘要
+  pagebreak(to: "odd", weak: true)
   heading([摘#h(2em)要])
   cnabstract
   v(1em)
@@ -152,6 +154,7 @@
   //************
 
   //************ 目录
+  pagebreak(to: "odd", weak: true)
   set par(first-line-indent: 0em, justify: true)
   outline(title: [目#h(2em)录], indent: true, depth: 3)
   i-figured.outline(title: [图形列表])
@@ -164,7 +167,7 @@
 
   // 设置章节标题分页、居中、黑体
   show heading.where(level: 1): it => {
-    pagebreak(to: "odd")
+    pagebreak(to: "odd", weak: true)
     align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
   }
 
