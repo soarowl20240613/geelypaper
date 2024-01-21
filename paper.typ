@@ -20,9 +20,7 @@
   set document(title: title, author: author, keywords: cnkeywords.join("，") + enkeywords.join("; "))
   set text(font: ("Times New Roman", "SimSun"), lang: "zh")
 
-  // 设置章节标题分页、居中、黑体
   show heading.where(level: 1): it => {
-    pagebreak(weak: true)
     align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
   }
 
@@ -161,8 +159,14 @@
   i-figured.outline(target-kind: raw, title: [代码列表])
   // master 版本不能编译
   i-figured.outline(target-kind: math.equation, title: [公式列表])
-  pagebreak()
+  // pagebreak() 可能引起多余空白页
   //************
+
+  // 设置章节标题分页、居中、黑体
+  show heading.where(level: 1): it => {
+    pagebreak(to: "odd")
+    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
+  }
 
   //************ 正文
   set page(numbering: "1")
