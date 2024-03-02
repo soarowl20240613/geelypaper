@@ -19,7 +19,7 @@ The system adopts the design concept of separating the front and rear ends, and 
   author: "袁天罡",
   studentnumber: "211124010635",
   adviser: "卓能文",
-  date: "2023年5月",
+  date: "二〇二四年五月",
   cnabstract: cnabstract,
   cnkeywords: ("Vue", "SpringBoot框架", "MySQL", "交互"),
   enabstract: enabstract,

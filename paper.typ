@@ -18,7 +18,7 @@
   body,
 ) = {
   set document(title: title, author: author, keywords: cnkeywords.join("，") + enkeywords.join("; "))
-  set text(font: ("Times New Roman", "SimSun"), lang: "zh")
+  set text(12pt, font: ("Times New Roman", "SimSun"), lang: "zh")
 
   show heading.where(level: 1): it => {
     align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
@@ -58,29 +58,31 @@
   align(center, image("logo.png", width: 50%))
   v(10pt)
   set align(center)
-  text(3em, "本科毕业设计")
+  text(40pt, "本科毕业设计")
 
   v(10fr, weak: true)
   let hline() = [#v(-0.7em)#line(length: 20em)]
-  table(
-    columns: (20%, auto),
-    stroke: none,
-    [题#h(2em)目：],
-    [#title#hline()],
-    [学#h(2em)院：],
-    [#faculty#hline()],
-    [年级专业：],
-    [#class#hline()],
-    [学生姓名：],
-    [#author#hline()],
-    [学#h(2em)号：],
-    [#studentnumber#hline()],
-    [指导教师：],
-    [#adviser#hline()]
+  text(14pt,
+    table(
+      columns: (20%, auto),
+      stroke: none,
+      [题#h(2em)目：],
+      [#title#hline()],
+      [学#h(2em)院：],
+      [#faculty#hline()],
+      [年级专业：],
+      [#class#hline()],
+      [学生姓名：],
+      [#author#hline()],
+      [学#h(2em)号：],
+      [#studentnumber#hline()],
+      [指导教师：],
+      [#adviser#hline()]
+    )
   )
 
   v(10fr, weak: true)
-  text(1.1em, date)
+  text(14pt, date)
 
   set align(left)
   pagebreak()
@@ -96,7 +98,7 @@
 
   //************ 版权页
   pagebreak(to: "odd", weak: true)
-  align(center, text(1.5em, font: "SimHei", [学术诚信声明]))
+  align(center, text(16pt, font: "SimHei", [学术诚信声明]))
   [本人郑重声明：所呈交的毕业论文（设计），是本人在导师的指导下，独立进行研究工作所取得的成果。除文中已经注明引用的内容外，本论文不包含任何其他个人或集体已经发表或撰写过的作品成果。对本文的研究做出重要贡献的个人和集体，均已在文中以明确方式标明。本人完全意识到本声明的法律结果由本人承担。]
   table(
     columns: (1fr, 1fr, 1fr, 1fr),
@@ -105,8 +107,8 @@
   )
 
   v(2em)
-  align(center, text(1.5em, font: "SimHei", [版权使用授权书]))
-  [本人在导师指导下所完成的毕业设计（论文）及相关的资料（包括图纸、试验记录、原始数据、实物照片、图片、录音带、设计手稿等），知识产权归属吉利学院。本人完全了解吉利学院有关保存、使用毕业设计（论文）的规定。本人授权吉利学院可以将本毕业设计（论文）的全部或部分内容编入有关数据库进行检索，可以采用任何复制手段保存和汇编本毕业设计（论文）。如果发表相关成果，一定征得指导教师同意，且第一署名单位为吉利学院。本人离校后使用毕业毕业设计（论文）或与该论文直接相关的学术论文或成果时，第一署名单位仍为吉利学院。]
+  align(center, text(16pt, font: "SimHei", [版权使用授权书]))
+  [本人在导师指导下所完成的毕业论文（设计）及相关的资料（包括图纸、试验记录、原始数据、实物照片、图片、录音带、设计手稿等），知识产权归属吉利学院。本人完全了解吉利学院有关保存、使用毕业论文（设计）的规定。本人授权吉利学院可以将本毕业论文（设计）的全部或部分内容编入有关数据库进行检索，可以采用任何复制手段保存和汇编本毕业论文（设计）。如果发表相关成果，一定征得指导教师同意，且第一署名单位为吉利学院。本人离校后使用毕业论文（设计）或与该论文直接相关的学术论文或成果时，第一署名单位仍为吉利学院。]
   table(
     columns: (1fr, 1fr, 1fr, 1fr),
     stroke: none,
@@ -133,7 +135,7 @@
   heading([摘#h(2em)要])
   cnabstract
   v(1em)
-  let cn = cnkeywords.join("，")
+  let cn = cnkeywords.join("；")
   par(first-line-indent: 0em)[
     #text(font: "SimHei", [关键词：])
     #cn
