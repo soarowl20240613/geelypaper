@@ -88,14 +88,44 @@
   pagebreak()
   //************
 
-  set par(first-line-indent: 2em, justify: true)
-  show par: set block(spacing: 0.65em)
-  // Workaround 3: Automatically add empty paragraph after heading
+  // typst目前在标题、图、表、无序列表和有序列表之后不能正确缩进，添加以下代码：
+  //************ 设置缩进
+  let fake-par = style(styles => {
+    let b = par[#box()]
+    let t = measure(b + b, styles);
+    b
+    v(-t.height)
+  })
+  show enum: it => {
+    set par(first-line-indent: 2em, justify: true)
+    it
+    fake-par
+  }
+  show figure: it => {
+    it
+    fake-par
+  }
   show heading: it => {
     it
-    par(text(size: 0.35em, h(0.0em)))
-  } // Only works for paragraphs directly after heading
+    fake-par
+  }
+  show image: it => {
+    it
+    fake-par
+  }
+  show list: it => {
+    it
+    fake-par
+  }
+  show table: it => {
+    it
+    fake-par
+  }
+  //************
 
+  set par(first-line-indent: 2em, justify: true)
+  show par: set block(spacing: 0.65em)
+  
   //************ 版权页
   pagebreak(to: "odd", weak: true)
   align(center, text(16pt, font: "SimHei", [学术诚信声明]))
@@ -190,7 +220,7 @@
   }
   // 首行缩进
   set par(first-line-indent: 2em, justify: true)
-  
+
   body
   //************
 }
