@@ -541,6 +541,22 @@ _
 3. 本文的研究仍然存在一些不足之处，例如对用户需求的分析不够深入，系统安全性的处理还完善等，这些问题需要在今后的研究中得到进一步的完善和改进。
 综上所述，本文的研究为房屋租赁管理系统的设计和实现提供了一定的参考和借鉴值，也为相关领域的研究者提供了一点微薄之力。
 
+#counter(heading).update(0)
+#set heading(numbering: "A.1")
+= 附录
+
+您可在#link("https://github.com/soarowl/geelypaper.git")检查最新代码，或提PR。
+
+== 论文模板
+
+#code(raw(read("paper.typ"), lang: "typc"), lang: "typst")
+
+== 本文代码
+
+#code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typst")
+
+#bibliography("basic.yml", style: "gb-7714-2015-numeric")
+
 #set heading(numbering: none)
 
 = 致#h(2em)谢
@@ -558,19 +574,3 @@ _
 最后，笔者还要感谢笔者的朋友们，谢谢你们的建议和支持。你们用你们的话语温暖笔者，在笔者孤独时在笔者身边陪伴，让笔者感到自己是个幸运的人。
 
 总之，笔者的日记本永远记录着与你们共进退的日子，未来笔者们无论在世界的哪个角落，未来笔者们依然并行不悔。上天在笔者人生路上给予笔者许多的善意希望笔者们能够再次相遇在人生旅途的某处。感谢你们，祝笔者们回首枯藤老树时，仍是少年郎！
-
-#counter(heading).update(0)
-#set heading(numbering: "A.1")
-= 附录
-
-您可在#link("https://github.com/soarowl/geelypaper.git")检查最新代码，或提PR。
-
-== 论文模板
-
-#code(raw(read("paper.typ"), lang: "typc"), lang: "typst")
-
-== 本文代码
-
-#code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typst")
-
-#bibliography("basic.yml", style: "gb-7714-2015-numeric")
