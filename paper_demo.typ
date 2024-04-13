@@ -1,16 +1,16 @@
-#import "paper.typ":*
+#import "paper.typ": *
 
 #let cnabstract = [随着科学技术的迅速发展，导致农村劳动力过剩，大部分人流入城市寻求生计，最终成为城市人口。这就使得城市人口流动增加，房屋租赁也成为人们关心的重中之重。目前已有的房屋租赁方式有中介和小区物业进行代挂，但是这种传统的人为管理的方式存在很多弊端。比如说房源的真假难以分辨，看房过程繁琐，甚至还存在很多中介跑路的情况。当然市面上也有一部分看房软件，但经过调查出现很多监管不到位，房源虚假，中介费高和房源少等问题 @barb。
-
-所以，笔者做了一款房屋租赁系统来试图解决人们看房的困难。一款房屋租赁系统的存在可以带来很多好处。首先，它可以让房东和租户更容易地连接起来，节省彼此的时间和精力。其次，系统可以提供一些自动化功能，如在线预订、租金支付和合同签署等，使整个租赁过程更加快捷方便。此外，系统还可以提供租户信用评分、房源信息管理等功能，有助于提高租赁市场的透明度和规范性。最后，对于平台运营商而言，这类系统也是创造盈利模式的一个途径，因为他们可以通过收取服务费或广告费等方式获得收入 @camb。
-
-该系统采用前后端分离的设计理念，前端主要采用Vue框架。当前Vue是Javascript使用最常用的框架，因为Vue可用性高，并且用法多、范围广、对界面饱满有很大作用;后端部分使用SpringBoot框架，SpringBoot框架更加高效安全可靠，解决了配置复杂冗余的问题，而且还具有很多非功能特性，是作为计算机本科生必须掌握的技术;后台数据使用MySQL进行管理。]
+  
+  所以，笔者做了一款房屋租赁系统来试图解决人们看房的困难。一款房屋租赁系统的存在可以带来很多好处。首先，它可以让房东和租户更容易地连接起来，节省彼此的时间和精力。其次，系统可以提供一些自动化功能，如在线预订、租金支付和合同签署等，使整个租赁过程更加快捷方便。此外，系统还可以提供租户信用评分、房源信息管理等功能，有助于提高租赁市场的透明度和规范性。最后，对于平台运营商而言，这类系统也是创造盈利模式的一个途径，因为他们可以通过收取服务费或广告费等方式获得收入 @camb。
+  
+  该系统采用前后端分离的设计理念，前端主要采用Vue框架。当前Vue是Javascript使用最常用的框架，因为Vue可用性高，并且用法多、范围广、对界面饱满有很大作用;后端部分使用SpringBoot框架，SpringBoot框架更加高效安全可靠，解决了配置复杂冗余的问题，而且还具有很多非功能特性，是作为计算机本科生必须掌握的技术;后台数据使用MySQL进行管理。]
 
 #let enabstract = [With the rapid development of science and technology, there is a surplus of labor force in rural areas. Most of them flow into cities to seek livelihoods and eventually become urban population. This makes urban population mobility increase, housing rental has become the top priority of people's concern. At present, there are existing ways of housing rental agents and residential properties, but this traditional way of artificial management has many drawbacks. For example, the real estate is difficult to distinguish between the real estate and the real estate, and there are even many intermediaries running away. Of course, there are some house-viewing software on the market, but after investigation, there are many problems such as inadequate supervision, false housing, high agency fees and few housing resources @donne.
-
-So, I built a rental system to try to solve the problem of people looking at houses. The existence of a rental system can bring many benefits. First, it allows landlords and tenants to connect more easily, saving each other time and effort. Secondly, the system can provide some automatic functions, such as online booking, rent payment and contract signing, to make the whole leasing process faster and more convenient. In addition, the system can also provide tenants with credit scores, housing information management and other functions, helping to improve the transparency and standardization of the rental market. Finally, for platform operators, such systems are also a way to create a revenue model, as they can earn revenue by charging for services or advertising.
-
-The system adopts the design concept of separating the front and rear ends, and the front end mainly uses the Vue framework. At present, Vue is the most commonly used framework for Javascript, because Vue has high availability, and a wide range of usage, full interface has a great role; The back-end part uses SpringBoot framework, which is more efficient, safe and reliable, solves the problem of complex and redundant configuration, and also has many non-functional features, which is a technology that must be mastered by computer undergraduates. Backend data is managed using MySQL.]
+  
+  So, I built a rental system to try to solve the problem of people looking at houses. The existence of a rental system can bring many benefits. First, it allows landlords and tenants to connect more easily, saving each other time and effort. Secondly, the system can provide some automatic functions, such as online booking, rent payment and contract signing, to make the whole leasing process faster and more convenient. In addition, the system can also provide tenants with credit scores, housing information management and other functions, helping to improve the transparency and standardization of the rental market. Finally, for platform operators, such systems are also a way to create a revenue model, as they can earn revenue by charging for services or advertising.
+  
+  The system adopts the design concept of separating the front and rear ends, and the front end mainly uses the Vue framework. At present, Vue is the most commonly used framework for Javascript, because Vue has high availability, and a wide range of usage, full interface has a great role; The back-end part uses SpringBoot framework, which is more efficient, safe and reliable, solves the problem of complex and redundant configuration, and also has many non-functional features, which is a technology that must be mastered by computer undergraduates. Backend data is managed using MySQL.]
 
 #show: paper.with(
   title: "房屋租赁管理系统设计与实现",
@@ -52,7 +52,7 @@ The system adopts the design concept of separating the front and rear ends, and 
 
 首先是链家成立于2001年，是中国领先的房地产服务企业。业务覆盖广，房源质量高，服务者素质高。上面的房源基本上是通过中介上传来进行出租，虽然优点颇多，但是需要交过高的中介费，这对刚毕业的大学生和刚在城市工作的人不太友好。
 
-随后2007年安居客挤入租房行列，独有的“个人房源”选项虽然采用真实照片，但是少之甚少，大部分还是中介上传并且很多房源还是虚假房源。	据调查显示，安居客很多黑中介，会泄露用户个人信息，所以这是严重的监管不到位和信息不透明的现象。
+随后2007年安居客挤入租房行列，独有的“个人房源”选项虽然采用真实照片，但是少之甚少，大部分还是中介上传并且很多房源还是虚假房源。据调查显示，安居客很多黑中介，会泄露用户个人信息，所以这是严重的监管不到位和信息不透明的现象。
 
 通过对十年来租房平台弊端的总结以及改善，于2011年成立自如租房，也是链家产业下的长租公寓品牌。一改往日的中介入驻，使用自己的管家联系户主进行拍照看房，保障房源都是真实可靠的。但盈利模式是赚取差价以及收取服务费，价格往往高于市场价。
 由此看来，国内的房屋租赁系统在不断创新、提升用户体验和服务质量方面已经取得了很大的进展。随着市场竞争的加剧和技术的迭代升级，这些平台也将会带来更多的变化和发展。
@@ -99,7 +99,7 @@ MVP（Model-View-Presenter），是一种被广泛用于开发的架构设计模
 
 #figure(
   caption: [MVP架构图],
-  image("img/mvp.png", width: 50%)
+  image("img/mvp.png", width: 50%),
 ) <mvp>
 
 这样的分隔式处理，使Model和View达到完全分离，Model不受View的影响，降低了模块与模块间的耦合；同时这样的设计模式也简化了Activity的工作任务，在Activity中只需要处理生命周期的任务，使代码在一定程度上更加简洁明了；由于业务逻辑被分配至Presenter模块中，使得Activity不会因为后台线程的引用而无法回收资源，有效的避免了Activity的内存泄漏；模块间的联系紧密程度降低，且各模块有各自明确的分工，这使得代码的层次更加清晰，提高了代码的可读性；而Presenter多样的具体实现让单元测试变得更加便捷。
@@ -165,9 +165,9 @@ Git是一个开源的分布式版本控制工具，开发者们可使用GitHub�
 + 订单管理权限：房东可以查看自己的订单列表，包括预订信息、租金支付情况、租客身份信息等，并且可以接受或拒绝预订请求。此外，房东还可以在租期结束后收到租客提供的评价和投诉信息。
 
 + 报表分析权限：为了了解自己的房产运营状况，房东应该具有数据分析及图表功能，以便更好地了解自己的房产出租状态。通过这个功能，房东可以查看订单、收支情况、退款等相关报表，从而获得及时的反馈和监控。
-  
+
 + 合同签署权限：当租客确定预订房源之后，系统会生成一份标准的租赁合同，其中包括租期、租金、押金等重要信息。房东需要在签署合同前审查和确认租期等条款，确保自己的权益得到保障。
-  
+
 + 费用管理权限：房东可以在系统中设定租金、押金以及其他费用，并查看租客的付款情况和账单结算。此外，当存在租客欠费或违约时，房东还可以使用平台提供的退款和维权流程进行相应操作。
 
 + 房源维护权限：房东需要保持房源的良好状态，包括维修、清洁、安全等方面。在出现问题时，房东可以通过平台提供的房屋维修服务来解决问题，保证租户的居住质量。
@@ -194,7 +194,7 @@ Git是一个开源的分布式版本控制工具，开发者们可使用GitHub�
 
 == 本章小结
 
-本章主要通过绘制了项目的用例图和功能结构图，对用例分析、用例关系进行了较详细介绍。用户权限设计包含了三个部分，并对租客权限、户主权限以及管理员权限都做了并进行简要说明，完成了项目需求分析阶段的整体设计。 
+本章主要通过绘制了项目的用例图和功能结构图，对用例分析、用例关系进行了较详细介绍。用户权限设计包含了三个部分，并对租客权限、户主权限以及管理员权限都做了并进行简要说明，完成了项目需求分析阶段的整体设计。
 
 = 系统整体设计
 
@@ -437,17 +437,17 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
   caption: [category表],
   kind: table,
   supplement: "表",
-```tbl
-C | C | C | C | C | Cx
-L | L | R | C | C | Lx.
-_
-字段名称 | 类型    | 长度 | 是否null | 主键 | 字段说明
-_
-cid    | int     | 5   | 是      | 是
-_
-cname  | varchar | 10  | 否
-_
-```
+  ```tbl
+  C | C | C | C | C | Cx
+  L | L | R | C | C | Lx.
+  _
+  字段名称 | 类型    | 长度 | 是否null | 主键 | 字段说明
+  _
+  cid    | int     | 5   | 是      | 是
+  _
+  cname  | varchar | 10  | 否
+  _
+  ```,
 )
 
 === 接口设计
@@ -458,7 +458,7 @@ _
   caption: [数列求和],
   kind: math.equation,
   supplement: "公式",
-  $ sum_(k=1)^n k = (n(n+1)) / 2 $
+  $ sum_(k=1)^n k = (n(n+1)) / 2 $,
 )
 
 == 本章小结
@@ -472,7 +472,7 @@ _
 软件测试通常是指验证与确认两部分。该系统的主要进行了以下几个方面的测试：资源测试、功能测试、任务测试。测试的流程 @fig:testflow 所示。
 #figure(
   caption: [测试流程],
-  image("img/testflow.png", width: 50%)
+  image("img/testflow.png", width: 50%),
 ) <testflow>
 
 === 资源测试
@@ -502,25 +502,25 @@ _
 经过测试与修改以后，系统就可以正常运行了。@fig:login 显示用户进入系统的登录界面。
 #figure(
   caption: [登录界面],
-  image("img/login.png")
+  image("img/login.png"),
 ) <login>
 
 @fig:register 表示注册界面
 #figure(
   caption: [注册],
-  image("img/register.png")
+  image("img/register.png"),
 ) <register>
 
 @fig:home 表示用户的主页面
 #figure(
   caption: [主页面],
-  image("img/home.png")
+  image("img/home.png"),
 ) <home>
 
 @fig:manage 表示用户管理界面
 #figure(
   caption: [管理界面],
-  image("img/manage.png")
+  image("img/manage.png"),
 ) <manage>
 
 == 本章小结
