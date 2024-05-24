@@ -1,4 +1,3 @@
-#import "@preview/a2c-nums:0.0.1": int-to-cn-num
 #import "@preview/i-figured:0.2.4"
 #import "@preview/sourcerer:0.2.1": code
 #import "@preview/tbl:0.0.4"
@@ -214,7 +213,7 @@
   set heading(numbering: (..nums) => {
     let vals = nums.pos()
     if vals.len() == 1 {
-      let value = int-to-cn-num(vals.at(0))
+      let value = str(vals.at(0))
       return "第" + value + "章"
     } else {
       return nums.pos().map(str).join(".")
