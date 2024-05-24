@@ -1,15 +1,15 @@
 #import "paper.typ": *
 
 #let cnabstract = [随着科学技术的迅速发展，导致农村劳动力过剩，大部分人流入城市寻求生计，最终成为城市人口。这就使得城市人口流动增加，房屋租赁也成为人们关心的重中之重。目前已有的房屋租赁方式有中介和小区物业进行代挂，但是这种传统的人为管理的方式存在很多弊端。比如说房源的真假难以分辨，看房过程繁琐，甚至还存在很多中介跑路的情况。当然市面上也有一部分看房软件，但经过调查出现很多监管不到位，房源虚假，中介费高和房源少等问题 @barb。
-  
+
   所以，笔者做了一款房屋租赁系统来试图解决人们看房的困难。一款房屋租赁系统的存在可以带来很多好处。首先，它可以让房东和租户更容易地连接起来，节省彼此的时间和精力。其次，系统可以提供一些自动化功能，如在线预订、租金支付和合同签署等，使整个租赁过程更加快捷方便。此外，系统还可以提供租户信用评分、房源信息管理等功能，有助于提高租赁市场的透明度和规范性。最后，对于平台运营商而言，这类系统也是创造盈利模式的一个途径，因为他们可以通过收取服务费或广告费等方式获得收入 @camb。
-  
+
   该系统采用前后端分离的设计理念，前端主要采用Vue框架。当前Vue是Javascript使用最常用的框架，因为Vue可用性高，并且用法多、范围广、对界面饱满有很大作用;后端部分使用SpringBoot框架，SpringBoot框架更加高效安全可靠，解决了配置复杂冗余的问题，而且还具有很多非功能特性，是作为计算机本科生必须掌握的技术;后台数据使用MySQL进行管理。]
 
 #let enabstract = [With the rapid development of science and technology, there is a surplus of labor force in rural areas. Most of them flow into cities to seek livelihoods and eventually become urban population. This makes urban population mobility increase, housing rental has become the top priority of people's concern. At present, there are existing ways of housing rental agents and residential properties, but this traditional way of artificial management has many drawbacks. For example, the real estate is difficult to distinguish between the real estate and the real estate, and there are even many intermediaries running away. Of course, there are some house-viewing software on the market, but after investigation, there are many problems such as inadequate supervision, false housing, high agency fees and few housing resources @donne.
-  
+
   So, I built a rental system to try to solve the problem of people looking at houses. The existence of a rental system can bring many benefits. First, it allows landlords and tenants to connect more easily, saving each other time and effort. Secondly, the system can provide some automatic functions, such as online booking, rent payment and contract signing, to make the whole leasing process faster and more convenient. In addition, the system can also provide tenants with credit scores, housing information management and other functions, helping to improve the transparency and standardization of the rental market. Finally, for platform operators, such systems are also a way to create a revenue model, as they can earn revenue by charging for services or advertising.
-  
+
   The system adopts the design concept of separating the front and rear ends, and the front end mainly uses the Vue framework. At present, Vue is the most commonly used framework for Javascript, because Vue has high availability, and a wide range of usage, full interface has a great role; The back-end part uses SpringBoot framework, which is more efficient, safe and reliable, solves the problem of complex and redundant configuration, and also has many non-functional features, which is a technology that must be mastered by computer undergraduates. Backend data is managed using MySQL.]
 
 #show: paper.with(

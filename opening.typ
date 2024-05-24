@@ -24,7 +24,7 @@
   set par(first-line-indent: 2em, justify: true)
   show par: set block(spacing: 0.65em)
   set text(font: ("Times New Roman", "SimSun"), lang: "zh")
-  
+
   //************ 标题页设置
   v(5fr)
   // align(center, image("logo.png", width: 50%))
@@ -33,45 +33,37 @@
   text(3em, "吉利学院")
   v(10pt)
   text(3em, "毕业论文（设计）开题报告")
-  
+
   v(10fr, weak: true)
   let hline() = [#v(-0.7em)#line(length: 20em)]
   table(
     columns: (20%, auto),
     stroke: none,
-    [题#h(2em)目：],
-    [#title#hline()],
-    [学#h(2em)院：],
-    [#faculty#hline()],
-    [专#h(2em)业：],
-    [#profession#hline()],
-    [学生姓名：],
-    [#author#hline()],
-    [学#h(2em)号：],
-    [#studentnumber#hline()],
-    [指导教师：],
-    [#adviser#hline()],
+    [题#h(2em)目：], [#title#hline()],
+    [学#h(2em)院：], [#faculty#hline()],
+    [专#h(2em)业：], [#profession#hline()],
+    [学生姓名：], [#author#hline()],
+    [学#h(2em)号：], [#studentnumber#hline()],
+    [指导教师：], [#adviser#hline()],
   )
-  
+
   v(10fr, weak: true)
   set align(left)
   pagebreak()
   //************
-  
-  
+
+
   let h1em = [#h(1em)#v(-0.7em)#line(length: 1em)]
   let h2em = [#h(2em)#v(-0.7em)#line(length: 2em)]
   let signature = {
     grid(
       columns: (2fr, 1fr, 2fr, 1fr, 2fr),
-      [指导教师（签字）：],
-      [],
-      [教研室负责人（签字）：],
-      [],
+      [指导教师（签字）：], [], [教研室负责人（签字）：], [],
       [#align(end)[#h(2em)年#h(1em)月#h(1em)日]],
+
     )
   }
-  
+
   table(
     columns: (1fr,),
     [*一、选题依据和意义*#linebreak()#purpose],
