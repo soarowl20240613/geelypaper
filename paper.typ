@@ -212,9 +212,10 @@
     }
   })
   // 设置章节标题分页并位于奇数页、居中、黑体
+  show heading: set text(font: ("Times New Roman", "SimHei"))
   show heading.where(level: 1): it => {
     pagebreak(to: "odd", weak: true)
-    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
+    align(center)[#it]
   }
   // 首行缩进
   set par(first-line-indent: 2em, justify: true)
