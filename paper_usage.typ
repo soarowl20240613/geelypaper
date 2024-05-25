@@ -130,7 +130,7 @@ typst compile example.typ
 
 == 文档结构
 
-```typst
+```typc
 = 一级标题
 == 二级标题
 === 三级标题
