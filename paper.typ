@@ -187,6 +187,7 @@
   //************ 中文摘要
   pagebreak(to: "odd", weak: true)
   heading([摘#h(2em)要])
+  v(5pt)
   cnabstract
   v(1em)
   let cn = cnkeywords.join("；")
@@ -199,6 +200,7 @@
 
   //************ 英文摘要
   heading([ABSTRACT])
+  v(5pt)
   enabstract
   v(1em)
   let en = enkeywords.join("; ")
