@@ -190,7 +190,12 @@ typst compile example.typ
 ```
 
 ```typst-ex
-$ sum_(k=1)^n k = (n(n+1)) / 2 $
+#figure(
+  caption: [数列求和],
+  kind: math.equation,
+  supplement: "公式",
+  $ sum_(k=1)^n k = (n(n+1)) / 2 $
+)
 ```
 
 == 插入代码块
