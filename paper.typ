@@ -27,6 +27,22 @@
   enkeywords: (),
   body,
 ) = {
+  // 设置纸张大小
+  set page(
+    paper: "a4",
+    margin: (top: 2.5cm, bottom: 2cm, inside: 2.5cm, outside: 2cm),
+  )
+
+  // 设置标题
+  set document(
+    title: title,
+    author: author,
+    keywords: cnkeywords.join("，") + enkeywords.join("; "),
+  )
+
+  // 设置正文
+  set text(12pt, font: ("Times New Roman", "SimSun"), lang: "zh", region: "cn")
+
   set document(
     title: title,
     author: author,
