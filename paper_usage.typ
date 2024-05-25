@@ -256,4 +256,8 @@ barb:
 
 在文章适当的地方插入`@audio-descriptions`@audio-descriptions 或`@barb`@barb 这类的键。
 
+== typst进阶
+
+更多内容请参考#link("https://github.com/soarowl/typst.git")[Typst简介]及#link("https://typst.app/docs")[Typst官方文档]
+
 #bibliography("basic.yml", style: "gb-7714-2015-numeric")
