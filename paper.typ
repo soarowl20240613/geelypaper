@@ -1,6 +1,17 @@
+#import "@preview/easytable:0.1.0": easytable, elem
+#import elem: *
 #import "@preview/i-figured:0.2.4"
 #import "@preview/sourcerer:0.2.1": code
-#import "@preview/tbl:0.0.4"
+
+//************ 表格设置
+#let tr_alt = tr.with(cell_style: (x: none, y: none) => (
+  fill: if calc.even(y) {
+    luma(95%)
+  } else {
+    none
+  },
+))
+//************
 
 #let paper(
   title: "",
@@ -50,9 +61,7 @@
   }
   //************
 
-  //************ 表格设置
-  show: tbl.template.with(box: false, breakable: true, tab: "|")
-  //************
+
 
   //************ 标题页设置
   v(5fr)

@@ -437,17 +437,18 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
   caption: [category表],
   kind: table,
   supplement: "表",
-  ```tbl
-  C | C | C | C | C | Cx
-  L | L | R | C | C | Lx.
-  _
-  字段名称 | 类型    | 长度 | 是否null | 主键 | 字段说明
-  _
-  cid    | int     | 5   | 是      | 是
-  _
-  cname  | varchar | 10  | 否
-  _
-  ```,
+  easytable({
+    let tr = tr_alt
+
+    cwidth(1fr, 1fr, 1fr)
+    cstyle(left, center, right)
+    th[Header 1][Header 2][Header 3]
+    tr[How][I][want]
+    tr[a][drink,][alcoholic]
+    tr[of][course,][after]
+    tr[the][heavy][lectures]
+    tr[involving][quantum][mechanics.]
+  }),
 )
 
 === 接口设计
