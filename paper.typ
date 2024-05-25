@@ -37,11 +37,9 @@
   // how this should behave with zeros can be set using `zero-fill`.
   // e.g., setting `zero-fill: false` and `leading-zero: false` assures
   // there is never a `0` in the numbering.
-  show figure: i-figured.show-figure.with(level: 1)
-  // master 版本不能编译
+  show figure: i-figured.show-figure.with(level: 1, numbering: "1-1")
   show math.equation: i-figured.show-equation
 
-  // set figure(numbering: "1-1") // don't work, maybe a typst bug
   set figure.caption(position: top, separator: [#h(1em)])
   show figure.where(kind: image): set figure.caption(position: bottom)
   //************
@@ -95,7 +93,6 @@
     v(-t.height)
   })
   show enum: it => {
-    set par(first-line-indent: 2em, justify: true)
     it
     fake-par
   }
