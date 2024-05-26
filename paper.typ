@@ -163,11 +163,13 @@
   table(
     columns: (1fr, 1fr, 1fr, 1fr),
     stroke: none,
-    [#align(right, [作者签名：])], [#v(1em)#line(length: 100%)], [#align(
+    [#align(right, [作者签名：])],
+    [#v(1em)#line(length: 100%)],
+    [#align(
         right,
         [指导教师签名：],
-      )], [#v(1em)#line(length: 100%)],
-
+      )],
+    [#v(1em)#line(length: 100%)],
   )
 
   pagebreak()
