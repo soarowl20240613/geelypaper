@@ -1,7 +1,7 @@
+#import "@preview/codly:0.2.1": *
 #import "@preview/easytable:0.1.0": easytable, elem
 #import elem: *
 #import "@preview/i-figured:0.2.4"
-#import "@preview/sourcerer:0.2.1": code
 
 //************ 表格设置
 #let tr_alt = tr.with(cell_style: (x: none, y: none) => (
@@ -27,32 +27,21 @@
   enkeywords: (),
   body,
 ) = {
+  // 设置文档属性
+  set document(
+    title: title,
+    author: author,
+    keywords: cnkeywords.join("，") + enkeywords.join("; "),
+  )
+
   // 设置纸张大小
   set page(
     paper: "a4",
     margin: (top: 2.5cm, bottom: 2cm, inside: 2.5cm, outside: 2cm),
   )
 
-  // 设置标题
-  set document(
-    title: title,
-    author: author,
-    keywords: cnkeywords.join("，") + enkeywords.join("; "),
-  )
-
   // 设置正文
   set text(12pt, font: ("Times New Roman", "SimSun"), lang: "zh", region: "cn")
-
-  set document(
-    title: title,
-    author: author,
-    keywords: cnkeywords.join("，") + enkeywords.join("; "),
-  )
-  set text(12pt, font: ("Times New Roman", "SimSun"), lang: "zh", region: "cn")
-
-  show heading.where(level: 1): it => {
-    align(center)[#text(font: ("Times New Roman", "SimHei"))[#it]]
-  }
 
   //************ 图形、代码及表格列表设置
   // this `level: 2` instructs the figure counters to be reset for every
@@ -72,8 +61,18 @@
   //************
 
   //************ 代码框设置
+  let icon(codepoint) = {
+    box(
+      height: 0.8em,
+      baseline: 0.05em,
+      image(codepoint),
+    )
+    h(0.1em)
+  }
+
+  show: codly-init.with()
   show raw.where(block: true): it => {
-    code(it)
+    text(size: 9pt)[#it]
   }
   //************
 

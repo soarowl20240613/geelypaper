@@ -26,6 +26,13 @@
   enkeywords: ("Vue", "SpringBoot framework", "MySQL", "interaction"),
 )
 
+// 设置本文档支持的代码语言
+#codly(languages: (
+  py3: (name: "python", icon: none, color: rgb("#CE412B")),
+  typc: (name: "typc", icon: none, color: rgb("#CE412B")),
+  typst: (name: "typst", icon: none, color: rgb("#CE412B")),
+))
+
 = 绪论
 
 == 研究目的和意义
@@ -550,11 +557,11 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 
 == 论文模板
 
-#code(raw(read("paper.typ"), lang: "typc"), lang: "typst")
+#raw(read("paper.typ"), lang: "typc", block: true)
 
 == 本文代码
 
-#code(raw(read("paper_demo.typ"), lang: "typc"), lang: "typst")
+#raw(read("paper_demo.typ"), lang: "typc", block: true)
 
 #bibliography("basic.yml", style: "gb-7714-2015-numeric")
 

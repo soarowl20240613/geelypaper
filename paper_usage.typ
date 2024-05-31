@@ -29,7 +29,7 @@
   let txt = it.text
   showybox(
     [代码：
-      #code(raw(txt, lang: "typc", block: true), lang: "typst")],
+      #raw(txt, lang: "typc", block: true)],
     [结果：
       #eval(
         txt,
@@ -45,6 +45,13 @@
       )],
   )
 }
+
+// 设置本文档支持的代码语言
+#codly(languages: (
+  py3: (name: "python", icon: none, color: rgb("#CE412B")),
+  typc: (name: "typc", icon: none, color: rgb("#CE412B")),
+  typst: (name: "typst", icon: none, color: rgb("#CE412B")),
+))
 
 = 绪论
 
@@ -216,6 +223,7 @@ int main() {
 ````typst-ex
 #figure(
   caption: [计算斐波纳契],
+  supplement: "代码",
   raw(read("src/fibonaci.py"), lang: "py3", block: true)
 )
 ````
