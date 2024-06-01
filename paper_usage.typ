@@ -46,13 +46,6 @@
   )
 }
 
-// 设置本文档支持的代码语言
-#codly(languages: (
-  py3: (name: "python", icon: none, color: rgb("#CE412B")),
-  typc: (name: "typc", icon: none, color: rgb("#CE412B")),
-  typst: (name: "typst", icon: none, color: rgb("#CE412B")),
-))
-
 = 绪论
 
 == Typst简介

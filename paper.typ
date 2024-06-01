@@ -1,7 +1,7 @@
-#import "@preview/codly:0.2.1": *
 #import "@preview/easytable:0.1.0": easytable, elem
 #import elem: *
 #import "@preview/i-figured:0.2.4"
+#import "@preview/sourcerer:0.2.1": code
 
 //************ 表格设置
 #let tr_alt = tr.with(cell_style: (x: none, y: none) => (
@@ -61,19 +61,12 @@
   //************
 
   //************ 代码框设置
-  let icon(codepoint) = {
-    box(
-      height: 0.8em,
-      baseline: 0.05em,
-      image(codepoint),
-    )
-    h(0.1em)
-  }
-
-  show: codly-init.with()
-  show raw.where(block: true): it => {
-    text(size: 9pt)[#it]
-  }
+  show raw.where(block: true): it => code(
+    fill: none,
+    lang: it.lang,
+    stroke: 0pt + luma(180),
+    it,
+  )
   //************
 
   //************ 标题页设置
@@ -181,6 +174,12 @@
   )
   //************
 
+  // 设置章节标题居中、黑体
+  show heading: set text(font: ("Times New Roman", "SimHei"))
+  show heading.where(level: 1): it => {
+    align(center)[#it]
+  }
+
   set heading(numbering: none)
   set page(numbering: "I")
   counter(page).update(1)
@@ -237,8 +236,7 @@
       return nums.pos().map(str).join(".")
     }
   })
-  // 设置章节标题分页并位于奇数页、居中、黑体
-  show heading: set text(font: ("Times New Roman", "SimHei"))
+  // 设置章节标题分页并位于奇数页、居中
   show heading.where(level: 1): it => {
     pagebreak(to: "odd", weak: true)
     align(center)[#it]
