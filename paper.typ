@@ -214,7 +214,7 @@
   //************ 目录
   pagebreak(to: "odd", weak: true)
   set par(first-line-indent: 0em, justify: true)
-  outline(title: [目#h(2em)录], indent: true, depth: 3)
+  outline(title: [目#h(2em)录], indent: 2em, depth: 3)
   i-figured.outline(title: [图形列表])
   i-figured.outline(target-kind: table, title: [表格列表])
   i-figured.outline(target-kind: raw, title: [代码列表])

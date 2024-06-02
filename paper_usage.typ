@@ -156,8 +156,9 @@ typst compile example.typ
 
 ```typst-ex
 #figure(
+  caption: [管理界面],
+  supplement: "图",
   image("img/manage.png", width: 80%),
-  caption: [管理界面]
 )
 ```
 
