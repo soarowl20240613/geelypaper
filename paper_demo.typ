@@ -433,20 +433,23 @@ Navicat是一款功能强大的数据库管理工具，支持多种数据库管�
 
 === 数据库设计
 
-#figure(
-  caption: [article表],
-  kind: table,
-  supplement: "表",
-  table(
-    columns: (auto, 1fr, 1fr, 1fr),
-    align: (left,),
-    table.header[Month][Title][Author][Genre],
-    [January], [The Great Gatsby], [F. Scott Fitzgerald], [Classic],
-    [February], [To Kill a Mockingbird], [Harper Lee], [Drama],
-    [March], [1984], [George Orwell], [Dystopian],
-    [April], [The Catcher in the Rye], [J.D. Salinger], [Coming-of-Age],
-  ),
-)
+#{
+  show table.cell.where(y: 0): set text(weight: "bold")
+  figure(
+    caption: [article表],
+    kind: table,
+    supplement: "表",
+    table(
+      columns: (auto, 1fr, 1fr, 1fr),
+      align: (left,),
+      table.header[Month][Title][Author][Genre],
+      [January], [The Great Gatsby], [F. Scott Fitzgerald], [Classic],
+      [February], [To Kill a Mockingbird], [Harper Lee], [Drama],
+      [March], [1984], [George Orwell], [Dystopian],
+      [April], [The Catcher in the Rye], [J.D. Salinger], [Coming-of-Age],
+    ),
+  )
+}
 
 === 接口设计
 

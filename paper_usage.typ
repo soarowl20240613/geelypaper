@@ -164,13 +164,33 @@ typst compile example.typ
   table(
     columns: (auto, 1fr, 1fr, 1fr),
     align: (left,),
-    table.header[Month][Title][Author][Genre],
+    table.header[*Month*][*Title*][*Author*][*Genre*],
     [January], [The Great Gatsby], [F. Scott Fitzgerald], [Classic],
     [February], [To Kill a Mockingbird], [Harper Lee], [Drama],
     [March], [1984], [George Orwell], [Dystopian],
     [April], [The Catcher in the Rye], [J.D. Salinger], [Coming-of-Age],
   ),
 )
+```
+
+```typst-ex
+#{
+  show table.cell.where(y: 0): set text(weight: "bold")
+  figure(
+    caption: [article表],
+    kind: table,
+    supplement: "表",
+    table(
+      columns: (auto, 1fr, 1fr, 1fr),
+      align: (left,),
+      table.header[Month][Title][Author][Genre],
+      [January], [The Great Gatsby], [F. Scott Fitzgerald], [Classic],
+      [February], [To Kill a Mockingbird], [Harper Lee], [Drama],
+      [March], [1984], [George Orwell], [Dystopian],
+      [April], [The Catcher in the Rye], [J.D. Salinger], [Coming-of-Age],
+    ),
+  )
+}
 ```
 
 == 插入公式

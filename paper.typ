@@ -234,8 +234,8 @@
 
   // 表格可分页
   show figure.where(kind: table): set block(breakable: true)
-  // 标题加粗显示
-  show table.cell.where(y: 0): set text(weight: "bold")
+  // 标题加粗显示，和代码显示冲突！！
+  // show table.cell.where(y: 0): set text(weight: "bold")
 
   // 设置三线表格
   let frame(stroke) = (
