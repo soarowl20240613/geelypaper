@@ -1,5 +1,17 @@
+#import "@preview/easytable:0.1.0": easytable, elem
+#import elem: *
 #import "@preview/i-figured:0.2.4"
 #import "@preview/sourcerer:0.2.1": code
+
+//************ 表格设置
+#let tr_alt = tr.with(cell_style: (x: none, y: none) => (
+  fill: if calc.even(y) {
+    luma(95%)
+  } else {
+    none
+  },
+))
+//************
 
 #let paper(
   title: "",
@@ -231,31 +243,6 @@
   }
   // 首行缩进
   set par(first-line-indent: 2em, justify: true)
-
-  // 表格可分页
-  show figure.where(kind: table): set block(breakable: true)
-  // 标题加粗显示，和代码显示冲突！！
-  // show table.cell.where(y: 0): set text(weight: "bold")
-
-  // 设置三线表格
-  let frame(stroke) = (
-    x,
-    y,
-  ) => (
-    top: if y < 2 {
-      stroke
-    } else {
-      0pt
-    },
-    bottom: stroke,
-  )
-
-  set table(
-    // 背景色交替显示
-    fill: (_, y) => if calc.odd(y) { luma(240) },
-    // 黑色边线
-    stroke: frame(black),
-  )
 
   body
   //************
