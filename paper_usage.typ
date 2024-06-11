@@ -46,6 +46,7 @@
   )
 }
 
+#pagebreak(to: "odd", weak: true)
 = 绪论
 
 == Typst简介
@@ -60,6 +61,7 @@ Typst是一个类似TeX的排版系统，它使用类Markdown语法来描述文�
 
 安装Typst非常简单，只需要下载并安装Typst的安装包即可。在Windows平台上，可以通过下载安装包来安装Typst；在macOS平台上，可以通过Homebrew来安装Typst；在Linux平台上，可以通过apt-get或yum来安装Typst。
 
+#pagebreak(weak: true)
 = 模板使用
 
 == 下载模板
@@ -104,6 +106,7 @@ Typst是一个类似TeX的排版系统，它使用类Markdown语法来描述文�
   ),
 )
 
+#pagebreak(weak: true)
 = 绪论
 
 == Typst简介
@@ -184,26 +187,6 @@ typst compile example.typ
 )
 ```
 
-```typst-ex
-#{
-  show table.cell.where(y: 0): set text(weight: "bold")
-  figure(
-    caption: [article表],
-    kind: table,
-    supplement: "表",
-    table(
-      columns: (auto, 1fr, 1fr, 1fr),
-      align: (left,),
-      table.header[Month][Title][Author][Genre],
-      [January], [The Great Gatsby], [F. Scott Fitzgerald], [Classic],
-      [February], [To Kill a Mockingbird], [Harper Lee], [Drama],
-      [March], [1984], [George Orwell], [Dystopian],
-      [April], [The Catcher in the Rye], [J.D. Salinger], [Coming-of-Age],
-    ),
-  )
-}
-```
-
 == 插入公式
 
 ```typst-ex
@@ -282,4 +265,11 @@ barb:
 
 更多内容请参考#link("https://github.com/soarowl/typst.git")[Typst简介]及#link("https://typst.app/docs")[Typst官方文档]
 
+#pagebreak(to: "odd", weak: true)
 #bibliography("basic.yml", style: "gb-7714-2015-numeric")
+
+#pagebreak(to: "odd", weak: true)
+#set heading(numbering: none)
+= 致#h(2em)谢
+
+感谢家人、感谢朋友...

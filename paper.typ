@@ -195,10 +195,10 @@
     #text(font: "SimHei", [关键词：])
     #cn
   ]
-  pagebreak()
   //************
 
   //************ 英文摘要
+  pagebreak(to: "odd", weak: true)
   heading([ABSTRACT])
   v(5pt)
   enabstract
@@ -208,7 +208,6 @@
     #text([*Keywords:* ])
     #en
   ]
-  pagebreak()
   //************
 
   //************ 目录
@@ -238,7 +237,7 @@
   })
   // 设置章节标题分页并位于奇数页、居中
   show heading.where(level: 1): it => {
-    pagebreak(to: "odd", weak: true)
+    // pagebreak(weak: true)
     align(center)[#it]
   }
   // 首行缩进
