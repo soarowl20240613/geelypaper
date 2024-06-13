@@ -137,7 +137,7 @@
   show par: set block(spacing: 0.65em)
 
   //************ 版权页
-  pagebreak(to: "odd", weak: true)
+  pagebreak(weak: true)
   counter(page).update(1)
   align(center, text(16pt, font: "SimHei", [学术诚信声明]))
   v(5pt)
@@ -185,7 +185,7 @@
   counter(page).update(1)
 
   //************ 中文摘要
-  pagebreak(to: "odd", weak: true)
+  pagebreak(weak: true)
   heading([摘#h(2em)要])
   v(5pt)
   cnabstract
@@ -198,7 +198,7 @@
   //************
 
   //************ 英文摘要
-  pagebreak(to: "odd", weak: true)
+  pagebreak(weak: true)
   heading([ABSTRACT])
   v(5pt)
   enabstract
@@ -211,7 +211,7 @@
   //************
 
   //************ 目录
-  pagebreak(to: "odd", weak: true)
+  pagebreak(weak: true)
   set par(first-line-indent: 0em, justify: true)
   outline(title: [目#h(2em)录], indent: 2em, depth: 3)
   i-figured.outline(title: [图形列表])
@@ -237,7 +237,7 @@
   })
   // 设置章节标题分页并位于奇数页、居中
   show heading.where(level: 1): it => {
-    // pagebreak(weak: true)
+    pagebreak(weak: true)
     align(center)[#it]
   }
   // 首行缩进
